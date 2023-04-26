@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Off-white);
+    /* - Font size (inputs): 32px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--White);
+    width: 700px;
+    min-width: 320px;
+    padding: 3rem;
+    border-radius: 15px;
+    border-bottom-right-radius: 200px;
+}
+
+
+#inputs {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.form-input label {
+    font-size: .8rem;
+    letter-spacing: 3px;
+    color: var(--Smokey-grey);
+}
+
+.form-input input {
+    width: 100%;
+    max-width: 150px;
+    min-width: 70px;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    padding: .3rem 1rem;
+    color: var(--Off-black);
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid var(--Light-grey);
+}
+
+.form-input input::placeholder {
+    color: var(--Smokey-grey);
+}
+
+
+.form-input input:focus {
+    border: 2px solid var(--Purple);
+}
+
+#submit-container {
+    display: flex;
+    align-items: center;
+}
+
+#submit-container hr {
+    border: 1px solid var(--Off-white);
+    width: 100%;
+    height: 0;
+}
+
+#submit-container button {
+    border-radius: 100%;
+    background-color: var(--Purple);
+    border: none;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#submit-container button img {
+    width: 100%;
+    max-width: 35px;
+}
+
+#submit-container button:hover {
+    background-color: var(--Off-black);
+}
+
+
+
+
+.output-input {
+    display: flex;
+    font-size: 5.5rem;
+    line-height: 105px;
+
+}
+
+.output-input span {
+    color: var(--Purple);
+}
+
+.output-input p {
+    font-weight: 800;
+    font-style: italic;
+}
+
+.error {
+    color: var(--Light-red);
+    font-weight: 400;
+    font-style: italic;
+    font-size: .7rem;
+    line-height: 20px;
+}
+
+.color-effect {
+    color: var(--Light-red) !important;
+}
+
+.border-effect {
+    border: 2px solid var(--Light-red) !important;
+}
+
+
+@media screen and (max-width:768px) {
+    main {
+        width: 90%;
+        padding: 3rem 1.5rem;
+    }
+
+    #submit-container {
+        position: relative;
+        justify-content: center;
+    }
+
+    #submit-container hr {
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    #submit-container button {
+        z-index: 1;
+
+    }
+
+    #submit-container button img {
+        width: 20px;
+    }
+
+
+    .output-input {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+
+    .form-input input {
+        font-size: 18px;
+        padding: .5rem .5rem;
+    }
+
+}
